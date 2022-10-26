@@ -55,7 +55,7 @@ RSpec.describe "showpage" do
       @pet_app1 = PetApplicant.create!(pet_id: @pet1.id, applicant_id: @app1.id)
 
       visit "/applicants/#{@app1.id}"
-      fill_in "Why you would be a good home", with: "I dog fight"
+      fill_in "Why would you be a good home?", with: "I dog fight"
       click_button("Submit")
       expect(current_path).to eq("/applicants/#{@app1.id}")
       expect(page).to have_content("Pending")
