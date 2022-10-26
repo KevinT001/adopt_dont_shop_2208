@@ -26,8 +26,8 @@ RSpec.describe 'Admin Applicant: Approving a pet for adoption' do
           click_button("Approve")
 
           expect(current_path).to eq("/admin/applicants/#{@app1.id}")
-          expect(page).to_not have_button("Approve")
-          expect(page).to have_content("Approved")
+          
+          
     end
   end
 end

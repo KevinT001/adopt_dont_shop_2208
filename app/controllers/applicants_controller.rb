@@ -14,6 +14,7 @@ class ApplicantsController < ApplicationController
       @applicant.add_pet(params[:pet_id])
     end 
     if params[:description].present? 
+      @applicant.update(description: params[:description])
       @applicant.update(status: 1)
     end
   end
@@ -34,6 +35,11 @@ class ApplicantsController < ApplicationController
   
   def update
     applicant = Applicant.find(params[:id])
+    applicant = Applicant.find(params[:id])
+  end
+
+  def edit 
+    @applicant = Applicant.find(params[:id])
   end
 
   private 
