@@ -25,5 +25,7 @@ RSpec.describe PetApplicant, type: :model do
       
       expect(PetApplicant.find_pet_app(pet2.id, app2.id)).to eq(pet_app2)
     end
+
+    
   end
 end

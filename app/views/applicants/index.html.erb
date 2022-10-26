@@ -1,6 +1,7 @@
 <h1><center>Applicants<center></h1>
 <br>
 <br>
+
 <strong><center><% @applicants.each do |applicant| %>
   <p><%= applicant.name%></strong></p>
   <p><strong>Street address:</strong> <%= applicant.street_address %>, <%= applicant.city %>, <%= applicant.state %>, <%= applicant.zip_code %></p>
