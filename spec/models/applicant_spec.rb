@@ -7,7 +7,7 @@ RSpec.describe Applicant, type: :model do
     it { should validate_presence_of :city}
     it { should validate_presence_of :state}
     it { should validate_presence_of :zip_code}
-    it { should validate_presence_of :description}
+    # it { should validate_presence_of :description}
     it { should validate_presence_of :status}
   end
   describe 'relationship' do 
@@ -29,4 +29,5 @@ RSpec.describe Applicant, type: :model do
       expect(app3.pets).to eq([pet1, pet2])
     end
   end
+  
 end

@@ -9,7 +9,6 @@ RSpec.describe 'New Applicant Form' do
     fill_in 'City', with: 'Aurora'
     fill_in 'State', with: 'CO'
     fill_in 'Zip code', with: '80011'
-    fill_in 'Description', with: 'Looking for a friend'
 
     click_button("Submit")
     
@@ -25,7 +24,7 @@ RSpec.describe 'New Applicant Form' do
     fill_in 'City', with: 'Aurora'
     fill_in 'State', with: 'CO'
     fill_in 'Zip code', with: '80011'
-    fill_in 'Description', with: 'Looking for a friend'
+
 
     click_button("Submit")
     expect(current_path).to eq("/applicants/new")

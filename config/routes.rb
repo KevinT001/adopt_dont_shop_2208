@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get '/applicants', to: 'applicants#index'
   get '/applicants/new', to: 'applicants#new'
   post '/applicants', to: 'applicants#create'
+  get '/applicants/:id/edit', to: 'applicants#edit'
+  patch '/applicants/:id', to: 'applicants#show'
+  patch '/applicants/:id', to: 'applicants#update'
   get '/applicants/:id', to: 'applicants#show'
   
 
@@ -48,4 +51,8 @@ Rails.application.routes.draw do
   post '/veterinary_offices/:veterinary_office_id/veterinarians', to: 'veterinarians#create'
 
   get '/admin/shelters', to: 'admin_shelters#index'
+  get '/admin/applicants/:id', to: 'admin_applicants#show'
+  get '/admin/applicants/:id', to: 'admin_applicants#update'
+  patch '/admin/applicants/:id', to: 'admin_applicants#update'
+  post '/admin/applicants/:id', to: 'admin_applicants#show'
 end
