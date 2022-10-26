@@ -12,20 +12,21 @@
 <br>
 
 
-
-
 <% if @applicant.pets && @applicant.status == "In Progress" %>
-
   <center><%= form_with url: "/applicants/#{@applicant.id}", method: :get, local: true do |f| %>
-  <h4>Add a pet to this application</h4>
+  <strong><h4>Add a pet to this application below:</h4></strong>
   <%= f.label :search_name %>
+  <br>
   <%= f.text_field :search_name %>
   <%= f.submit "Search" %>
  <% end %>
+ <br>
+ <br>
  <% if @applicant.pets.present? && @applicant.status == "In Progress" %>
  <center><%= form_with url: "/applicants/#{@applicant.id}", method: :patch, local: true do |f| %>
-    <%= f.label :description, "Why you would be a good home" %>
-    <%= f.text_area :description %>
+    <%= f.label :description, "Why would you be a good home?" %>
+    <br>
+   <center> <%= f.text_area :description %>
     <%= f.submit "Submit" %>
   <% end %></center>
   <% end %>

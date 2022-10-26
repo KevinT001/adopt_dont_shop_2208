@@ -2,9 +2,9 @@
 <br>
 <br>
 
-<strong><center><% @applicants.each do |applicant| %>
-  <p><%= applicant.name%></strong></p>
+<center><% @applicants.each do |applicant| %>
+  <center><strong><p><%= applicant.name %></p></strong>
   <p><strong>Street address:</strong> <%= applicant.street_address %>, <%= applicant.city %>, <%= applicant.state %>, <%= applicant.zip_code %></p>
-  <p><strong>Status:</strong> <%= applicant.status %> </p></center>
+  <p><strong>Status: <%= applicant.status %></p></strong> </center>
   <hr>
 <% end %>

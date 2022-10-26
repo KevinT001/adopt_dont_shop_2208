@@ -15,7 +15,6 @@ RSpec.describe 'admin shelters index' do
       visit "/admin/shelters"
 
       within "#shelter-#{shelter5.id}" do 
-        
         expect(page).to have_content(shelter5.name)
         expect(page).to_not have_content(shelter6.name)
       end 
